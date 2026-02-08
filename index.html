@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Stream Deck - Accueil</title>
+    <title>Gaming Frost - Accueil</title>
     <style>
         * {
             margin: 0;
@@ -12,17 +12,18 @@
         }
 
         :root {
-            --primary-color: #6C63FF;
-            --secondary-color: #4CAF50;
-            --dark-bg: #1a1a2e;
-            --card-bg: #16213e;
-            --text-color: #e4e4e4;
-            --accent-color: #ff6b6b;
+            --primary-color: #87CEEB;
+            --secondary-color: #4FC3F7;
+            --dark-bg: #0a1929;
+            --card-bg: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #29B6F6;
+            --light-blue: #E3F2FD;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--dark-bg) 0%, #0f3460 100%);
+            background: linear-gradient(135deg, #f0f8ff 0%, #e1f5fe 100%);
             color: var(--text-color);
             min-height: 100vh;
             line-height: 1.6;
@@ -30,13 +31,13 @@
 
         /* Navigation */
         nav {
-            background: rgba(22, 33, 62, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             padding: 1.2rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(135, 206, 235, 0.3);
         }
 
         nav ul {
@@ -59,8 +60,9 @@
 
         nav a:hover {
             background: var(--primary-color);
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(135, 206, 235, 0.5);
         }
 
         /* Container */
@@ -100,7 +102,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -108,7 +110,7 @@
 
         .hero p {
             font-size: 1.3rem;
-            color: #b0b0b0;
+            color: #546e7a;
             max-width: 600px;
             margin: 0 auto 2rem;
         }
@@ -123,12 +125,12 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(108, 99, 255, 0.4);
+            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.4);
         }
 
         .hero-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(108, 99, 255, 0.6);
+            box-shadow: 0 8px 30px rgba(135, 206, 235, 0.6);
         }
 
         /* Programs Grid */
@@ -143,32 +145,32 @@
             background: var(--card-bg);
             border-radius: 20px;
             padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.3);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: 2px solid var(--light-blue);
         }
 
         .program-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary-color);
-            box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+            box-shadow: 0 15px 40px rgba(135, 206, 235, 0.5);
         }
 
         .program-card h3 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .program-card p {
-            color: #b0b0b0;
+            color: #546e7a;
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
 
         .install-btn {
             padding: 0.8rem 2rem;
-            background: var(--secondary-color);
+            background: var(--accent-color);
             color: white;
             border: none;
             border-radius: 30px;
@@ -179,9 +181,9 @@
         }
 
         .install-btn:hover {
-            background: #45a049;
+            background: var(--secondary-color);
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
+            box-shadow: 0 5px 20px rgba(79, 195, 247, 0.5);
         }
 
         /* Modal/Popup */
@@ -192,7 +194,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(135, 206, 235, 0.2);
             backdrop-filter: blur(5px);
             z-index: 2000;
             justify-content: center;
@@ -205,16 +207,17 @@
         }
 
         .modal-content {
-            background: var(--card-bg);
+            background: white;
             padding: 3rem;
             border-radius: 25px;
             max-width: 600px;
             width: 90%;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 60px rgba(135, 206, 235, 0.4);
             position: relative;
             animation: slideUp 0.3s ease;
+            border: 3px solid var(--light-blue);
         }
 
         @keyframes slideUp {
@@ -244,13 +247,13 @@
         }
 
         .modal-content h2 {
-            color: var(--primary-color);
+            color: var(--secondary-color);
             margin-bottom: 2rem;
             font-size: 2rem;
         }
 
         .step {
-            background: rgba(108, 99, 255, 0.1);
+            background: var(--light-blue);
             padding: 1.5rem;
             border-radius: 15px;
             margin-bottom: 1.5rem;
@@ -258,13 +261,13 @@
         }
 
         .step h4 {
-            color: var(--secondary-color);
+            color: var(--accent-color);
             margin-bottom: 0.8rem;
             font-size: 1.2rem;
         }
 
         .step p {
-            color: #b0b0b0;
+            color: #546e7a;
             margin-bottom: 0.8rem;
         }
 
@@ -280,7 +283,7 @@
         }
 
         .copy-btn {
-            background: var(--primary-color);
+            background: var(--secondary-color);
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -291,13 +294,13 @@
         }
 
         .copy-btn:hover {
-            background: #5549cc;
+            background: var(--accent-color);
         }
 
         .download-btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, var(--accent-color), #ff8787);
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
             color: white;
             text-decoration: none;
             border-radius: 30px;
@@ -308,7 +311,7 @@
 
         .download-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 5px 20px rgba(79, 195, 247, 0.5);
         }
 
         /* Contact Section */
@@ -320,7 +323,7 @@
         .contact-info h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .github-link {
@@ -328,7 +331,7 @@
             align-items: center;
             gap: 1rem;
             padding: 1.5rem 3rem;
-            background: #24292e;
+            background: var(--text-color);
             color: white;
             text-decoration: none;
             border-radius: 50px;
@@ -339,9 +342,9 @@
         }
 
         .github-link:hover {
-            background: #2f363d;
+            background: #333;
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(36, 41, 46, 0.6);
+            box-shadow: 0 10px 30px rgba(26, 26, 26, 0.4);
         }
 
         .github-icon {
@@ -360,14 +363,17 @@
         .feature {
             text-align: center;
             padding: 2rem;
-            background: rgba(108, 99, 255, 0.1);
+            background: white;
             border-radius: 15px;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
+            border: 2px solid var(--light-blue);
         }
 
         .feature:hover {
             transform: translateY(-5px);
-            background: rgba(108, 99, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(135, 206, 235, 0.4);
+            border-color: var(--primary-color);
         }
 
         .feature-icon {
@@ -386,7 +392,7 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--dark-bg);
+            background: var(--light-blue);
         }
 
         ::-webkit-scrollbar-thumb {
@@ -395,7 +401,7 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #5549cc;
+            background: var(--secondary-color);
         }
     </style>
 </head>
@@ -413,8 +419,8 @@
         <!-- HOME Section -->
         <section id="home" class="active">
             <div class="hero">
-                <h1>🚀 Bienvenue sur Gaming Frost</h1>
-                <p>Créez votre propre stream deck personnalisé avec des raccourcis vers vos applications et sons préférés. Simple, efficace et gratuit !</p>
+                <h1>❄️ Bienvenue sur Gaming Frost</h1>
+                <p>Découvrez nos programmes et outils pour améliorer votre expérience gaming. Des solutions simples, efficaces et gratuites !</p>
                 <a href="#" class="hero-btn" onclick="showSection('programmes')">Découvrir les Programmes</a>
             </div>
 
@@ -444,7 +450,7 @@
 
         <!-- PROGRAMMES Section -->
         <section id="programmes">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">📦 Nos Programmes</h2>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--secondary-color);">📦 Nos Programmes</h2>
             
             <div class="programs-grid">
                 <div class="program-card">
@@ -470,7 +476,7 @@
         <section id="contact">
             <div class="contact-info">
                 <h2>📧 Contact & GitHub</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #b0b0b0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #546e7a;">
                     Retrouvez le code source, contribuez au projet et signalez des bugs sur notre dépôt GitHub !
                 </p>
                 <a href="https://github.com" target="_blank" class="github-link">
@@ -492,7 +498,7 @@
             <div class="step">
                 <h4>📋 Étape 1 : Prérequis</h4>
                 <p>Assurez-vous d'avoir <strong>Python</strong> installé sur votre ordinateur.</p>
-                <p>Vous pouvez télécharger Python depuis <a href="https://www.python.org/downloads/" target="_blank" style="color: var(--secondary-color);">python.org</a></p>
+                <p>Vous pouvez télécharger Python depuis <a href="https://www.python.org/downloads/" target="_blank" style="color: var(--accent-color);">python.org</a></p>
             </div>
 
             <div class="step">
@@ -514,7 +520,7 @@
                 <h4>🚀 Étape 4 : Lancer le Programme</h4>
                 <p>Une fois téléchargé, double-cliquez sur le fichier Python (.py) ou lancez-le avec la commande :</p>
                 <div class="code-box">python nom_du_fichier.py</div>
-                <p style="margin-top: 1rem; color: var(--secondary-color);">✅ C'est terminé ! Profitez de votre Mini Stream Deck !</p>
+                <p style="margin-top: 1rem; color: var(--accent-color);">✅ C'est terminé ! Profitez de votre Mini Stream Deck !</p>
             </div>
         </div>
     </div>
